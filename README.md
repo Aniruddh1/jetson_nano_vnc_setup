@@ -63,3 +63,8 @@ gsettings set org.gnome.settings-daemon.plugins.sharing.service:/org/gnome/setti
 
 Open vnc viewer in widows and enter
 ```192.168.55.1:5900```
+
+enter following command to tackle display resolution issue
+```
+sudo xrandr --fb 1420x800
+```
