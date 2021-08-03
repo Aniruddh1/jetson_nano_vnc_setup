@@ -68,3 +68,8 @@ enter following command to tackle display resolution issue
 ```
 sudo xrandr --fb 1420x800
 ```
+ref links: 
+```
+https://www.youtube.com/watch?v=VBIWbpM0SaU
+https://askubuntu.com/questions/1112127/how-to-set-vinos-password-through-terminal
+```
