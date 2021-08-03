@@ -13,6 +13,7 @@ SSH to nano using Putty
 
 After doing ssh enter following commands
 
+```
 sudo apt-get install ntpdate
 sudo apt-get install vino
 gsettings set org.gnome.Vino prompt-enabled false
@@ -28,6 +29,7 @@ cd .config
 mkdir autostart
 
 nano autostart/vino-server.desktop
+```
 
 ```
 [Desktop Entry]
