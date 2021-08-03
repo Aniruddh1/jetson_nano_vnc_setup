@@ -62,4 +62,4 @@ gsettings set org.gnome.settings-daemon.plugins.sharing.service:/org/gnome/setti
 ```
 
 Open vnc viewer in widows and enter
-``192.168.55.1:5900```
+```192.168.55.1:5900```
