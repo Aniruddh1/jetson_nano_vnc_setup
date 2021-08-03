@@ -1,4 +1,4 @@
-# jetson nano setup vnc
+# Jetson nano setup vnc
 get remote access of jetson nano through vnc
 
 SSH to jetson nano using serial port.
@@ -61,3 +61,5 @@ eths=$(nmcli -t -f uuid,type c s --active | grep 802 | awk -F  ":" '{ print "'\'
 gsettings set org.gnome.settings-daemon.plugins.sharing.service:/org/gnome/settings-daemon/plugins/sharing/vino-server/ enabled-connections "[ $eths ]"
 ```
 
+Open vnc viewer in widows and enter
+``192.168.55.1:5900```
