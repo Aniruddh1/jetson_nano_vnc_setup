@@ -18,12 +18,18 @@ sudo apt-get install ntpdate
 sudo apt-get install vino
 gsettings set org.gnome.Vino prompt-enabled false
 gsettings set org.gnome.Vino require-encryption false
+```
 
+```
 sudo nano /etc/gdm3/custom.conf
-
+```
+replace home with the user of your device
+```
 AutomaticLoginEnable=True
 AutomaticLogin=home
+```
 
+```
 mkdir .config
 cd .config
 mkdir autostart
@@ -41,3 +47,17 @@ Name[en_US]=Vino Server(VNC)
 Comment[en_US]=remote control
 Comment=remote control
 ```
+
+Set password for vnc
+replace mypasswd with the password you want in the following comands 
+
+```
+gsettings set org.gnome.Vino prompt-enabled false
+gsettings set org.gnome.Vino authentication-methods "['vnc']"
+gsettings set org.gnome.Vino require-encryption false
+gsettings set org.gnome.Vino vnc-password $(echo -n 'mypasswd'|base64)
+gsettings set org.gnome.settings-daemon.plugins.sharing active true
+eths=$(nmcli -t -f uuid,type c s --active | grep 802 | awk -F  ":" '{ print "'\''" $1 "'\''" }' | paste -s -d, -)
+gsettings set org.gnome.settings-daemon.plugins.sharing.service:/org/gnome/settings-daemon/plugins/sharing/vino-server/ enabled-connections "[ $eths ]"
+```
+
